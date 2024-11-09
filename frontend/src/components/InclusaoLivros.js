@@ -13,13 +13,13 @@ const InclusaoLivros = () => {
             setAviso(`Ok! Livro cadastrado com sucesso!`);
             onAxios.post('int/enqueueMessageToSend', {
                 queueId: '58',
-                apiKey: '123',
-                number: '11949517119',
+                apiKey: '{key}',
+                number: '{numero}',
                 text: `Livro *${campos.titulo}* cadastrado com sucesso!`
               });  
             onAxios.post('int/createOpportunity', {
                     "queueId": '58',
-                    "apiKey": "123",
+                    "apiKey": '{key}',
                     "fkPipeline": '12',
                     "fkStage": '67',
                     "responsableid": '519',
